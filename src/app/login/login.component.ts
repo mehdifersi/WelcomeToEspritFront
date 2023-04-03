@@ -57,14 +57,14 @@ export class LoginComponent implements OnInit {
 
         this.login.loginUser(data.token);
 
-        this.login.getCurrentUser(this.loginData).subscribe(
+        this.login.getCurrentUser(this.loginData.email).subscribe(
           (user:any)=>{
             this.login.setUser(user);
             // console.log(user);
 
             if(this.login.getUserRole()=='STUDENT'){
 
-              Swal.fire('Bienvenue',this.login.getUser().username, 'success').then((result)=>{
+              Swal.fire('Bienvenue',this.login.getUser().email, 'success').then((result)=>{
                 if(result.isConfirmed){
 
                   this.router.navigate(['/']);
