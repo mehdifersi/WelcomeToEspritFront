@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginServiceService} from "../services/login-service.service";
+import {LoginServiceService} from "../../services/login-service.service";
 import {Router} from "@angular/router";
 import Swal from "sweetalert2";
-import baseUrl from "../services/helpers.service";
+import baseUrl from "../../services/helpers.service";
 import {HttpClient} from "@angular/common/http";
-import {RegisterService} from "../services/register.service";
+import {RegisterService} from "../../services/register.service";
 
 @Component({
   selector: 'app-sign-up',

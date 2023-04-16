@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginServiceService} from "../services/login-service.service";
+import {LoginServiceService} from "../../services/login-service.service";
 import {Router} from "@angular/router";
 import Swal from 'sweetalert2';
 
