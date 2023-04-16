@@ -1,0 +1,30 @@
+<app-nav-bar></app-nav-bar>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Log in - Brand</title>
+</head>
+
+<body>
+<section class="py-4 py-md-5 my-5">
+  <div class="container py-md-5">
+    <div class="row">
+      <div class="col-md-6 text-center"><img class="img-fluid w-100" src="../../../assets/img/illustrations/login.svg" /></div>
+      <div class="col-md-5 col-xl-4 text-center text-md-start">
+        <h2 class="display-6 fw-bold mb-5"><span class="underline pb-1"><strong>Login</strong><br /></span></h2>
+        {{loginData|json}}
+        <form method="post" (ngSubmit)="formSubmit()">
+          <div class="mb-3"><input [(ngModel)] = "loginData.email" class="shadow form-control" type="email" name="email" placeholder="Email" /></div>
+          <div class="mb-3"><input [(ngModel)] = "loginData.password" class="shadow form-control" type="password" name="password" placeholder="Password" /></div>
+          <div class="mb-5"><button class="btn btn-primary shadow" type="submit">Log in</button></div>
+          <p class="text-muted"><a href="forgotten-password">Forgot your password?</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+
+</html>
